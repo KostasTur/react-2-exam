@@ -16,7 +16,6 @@ function App() {
 					<RegistrationForm />
 				</Modal>
 			)}
-			<RegistrationForm />
 		</>
 	);
 }

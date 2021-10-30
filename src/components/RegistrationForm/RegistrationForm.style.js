@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const StyledRegistration = styled.div`
 	width: 900px;
-
 	display: felx;
 	background-color: white;
 	border-radius: 15px;
@@ -32,7 +31,7 @@ export const LeftTextWrapper = styled.div`
 	font-size: 18px;
 `;
 export const RegistrationRight = styled.div`
-	padding: 3rem;
+	padding: 3rem 3rem 0 3rem;
 	width: 50%;
 	border-radius: 0 15px 15px 0;
 	border: 2px solid var(--primary-color);

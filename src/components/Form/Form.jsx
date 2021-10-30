@@ -23,6 +23,12 @@ const StyledForm = styled.form`
 		margin-top: 10px;
 		margin-left: 10px;
 	}
+	.error-icon,
+	.success-icon {
+		position: absolute;
+		top: 35px;
+		right: 10px;
+	}
 	.error-icon {
 		color: red;
 	}
@@ -40,6 +46,10 @@ const StyledForm = styled.form`
 		padding: 0 30px;
 		outline: none;
 		cursor: pointer;
+	}
+	p {
+		margin-top: 0.2rem;
+		color: red;
 	}
 `;
 const StyledTextInput = styled.input`
@@ -63,7 +73,7 @@ const Form = ({
 	emailError,
 	passwordError,
 }) => {
-	console.log(state);
+	console.log(nameError);
 	return (
 		<StyledForm onSubmit={handleSumit}>
 			<div className='input-group'>
@@ -82,7 +92,9 @@ const Form = ({
 				{nameError.status === 'success' && (
 					<FaRegCheckCircle className='success-icon' />
 				)}
-				{nameError.messsage && <div>{nameError.message}</div>}
+				{nameError.message && (
+					<p className='error-message'>{nameError.message}</p>
+				)}
 			</div>
 			<div>
 				<label htmlFor='email'>Email</label>
@@ -100,7 +112,9 @@ const Form = ({
 				{emailError.status === 'success' && (
 					<FaRegCheckCircle className='success-icon' />
 				)}
-				{emailError.messsage && <div>{emailError.message}</div>}
+				{emailError.message && (
+					<p className='error-message'>{emailError.message}</p>
+				)}
 			</div>
 			<div>
 				<label htmlFor='password'>Password</label>
@@ -118,7 +132,9 @@ const Form = ({
 				{passwordError.status === 'success' && (
 					<FaRegCheckCircle className='success-icon' />
 				)}
-				{passwordError.messsage && <div>{passwordError.message}</div>}
+				{passwordError.message && (
+					<p className='error-message'>{passwordError.message}</p>
+				)}
 			</div>
 			<div>
 				<input type='submit' value='Submit' />
