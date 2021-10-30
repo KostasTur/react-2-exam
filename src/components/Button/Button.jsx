@@ -12,6 +12,7 @@ const StyledButton = styled.button`
 	box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
 	display: flex;
 	align-items: center;
+	white-space: nowrap;
 	font-size: 14px;
 	svg {
 		margin-right: 8px;

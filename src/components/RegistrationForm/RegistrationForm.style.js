@@ -52,7 +52,6 @@ export const RegistrationTop = styled.div`
 	div {
 		margin-top: 20px;
 		display: flex;
-		/* justify-content: space-between; */
 		gap: 20px;
 	}
 `;

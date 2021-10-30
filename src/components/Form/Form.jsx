@@ -19,7 +19,9 @@ const StyledForm = styled.form`
 		margin-bottom: 5px;
 	}
 	.input-icon {
-		margin-bottom: -10px;
+		position: absolute;
+		margin-top: 10px;
+		margin-left: 10px;
 	}
 	.error-icon {
 		color: red;
@@ -64,7 +66,7 @@ const Form = ({
 	console.log(state);
 	return (
 		<StyledForm onSubmit={handleSumit}>
-			<div>
+			<div className='input-group'>
 				<label htmlFor='name'>Name</label>
 				<FaRegUser className='input-icon' />
 				<StyledTextInput
